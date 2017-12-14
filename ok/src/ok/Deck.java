@@ -1,7 +1,7 @@
 package ok;
 
 import java.util.ArrayList;
-
+import java.util.Random;
 public class Deck {
 	ArrayList<Card> unDealt;
 	ArrayList<Card> Dealt;
@@ -29,6 +29,7 @@ public class Deck {
 	}
 	public Card deal()
 	{
+		int num = Random.nextInt(unDealt.size() + 1);
 		Card card = unDealt.get(1);
 		unDealt.remove(1);
 		return card;
